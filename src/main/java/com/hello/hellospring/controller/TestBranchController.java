@@ -1,9 +1,14 @@
 package com.hello.hellospring.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class TestBranchController {
 
-    public static void main(String[] args) {
-        System.out.println("tset controller");
-        System.out.println("commit");
+    @RequestMapping("/test")
+    public String test(){
+
+        return "test/branchTest";
     }
 }
