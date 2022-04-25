@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface MemberRepository {
 
-    Member save(Member member);
-    Optional<Member> findById(Long id);
-    Optional<Member> findByName(String name);
-    List<Member> findAll();
+    Member save(Member member); //멤버 객체 저장
+    Optional<Member> findById(Long id); //id로 찾기
+    Optional<Member> findByName(String name); //이름으로 찾기
+    List<Member> findAll(); // 멤버 전체 리스트
 
 }

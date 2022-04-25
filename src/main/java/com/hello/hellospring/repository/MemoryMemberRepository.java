@@ -3,12 +3,11 @@ package com.hello.hellospring.repository;
 import com.hello.hellospring.domain.Member;
 
 import java.util.*;
-
-public class MemoryMemberRepository implements MemberRepository{
-
+public class MemoryMemberRepository implements MemberRepository {
+    //구현체
     //저장을 위한 map
-    private static Map<Long, Member> store = new HashMap<>();
-    private static long sequence = 0L;
+    private static Map<Long, Member> store = new HashMap<>(); //
+    private static long sequence = 0L; //키 값을 생성해줌
 
     @Override
     public Member save(Member member) {
@@ -34,5 +33,10 @@ public class MemoryMemberRepository implements MemberRepository{
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values()); //store.values() = member
+    }
+
+    //Test를 위한 메소드
+    public void clearStore() {
+        store.clear();
     }
 }
